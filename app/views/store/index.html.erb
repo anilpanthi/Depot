@@ -7,9 +7,10 @@
 <% cache ['entry', product] do %>
 
 <div class="entry">
-	<%= image_tag(product.image_url) %> 
+	
 
 <h3><%= product.title %></h3>
+<%= image_tag(product.image_url) %> <br/>
 	<%= sanitize(product.description) %> 
 
 <div class="price_line">
