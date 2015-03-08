@@ -38,8 +38,7 @@ end
       if @order.save
        Cart.destroy(session[:cart_id])
           session[:cart_id] = nil
-          format.html { redirect_to store_url, notice:
-          'Thank you for your order.' }
+
           format.json { render action: 'show', status: :created,
           location: @order }
       else
